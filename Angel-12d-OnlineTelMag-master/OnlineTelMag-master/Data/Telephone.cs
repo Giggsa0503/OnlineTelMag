@@ -21,6 +21,5 @@ namespace OnlineTelMag.Data
         public ICollection<TelephoneImages> TelephoneImages { get; set; }
         public ICollection<Order> Orders { get; set; }
 
-        // public ICollection<OrderList> OrderLists { get; set; }
     }
 }

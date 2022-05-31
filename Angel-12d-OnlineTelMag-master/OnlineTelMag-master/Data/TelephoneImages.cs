@@ -13,15 +13,9 @@ namespace OnlineTelMag.Data
         public string Id { get; set; }
         [Required]
         public string ImagePath { get; set; }
-
-        //wrazka M:1
-        [Required]
-        //[ForeignKey("Product")]
+       [Required]
         public int TelephoneId { get; set; }
-
         public Telephone Telephones { get; set; }
-
-
 
     }
 }

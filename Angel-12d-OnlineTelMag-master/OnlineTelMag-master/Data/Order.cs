@@ -14,7 +14,6 @@ namespace OnlineTelMag.Data
         public int TelephoneId { get; set; }
         public Telephone Telephones { get; set; }
         public DateTime DateRegister { get; set; }
-       // public ICollection<OrderList> OrderLists { get; set; }
-
+      
     }
 }

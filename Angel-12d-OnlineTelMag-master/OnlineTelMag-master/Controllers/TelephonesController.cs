@@ -46,7 +46,7 @@ namespace OnlineTelMag.Controllers
         {
             List<Telephone> model = await _context.Telephones
                 .Include(t => t.Brands)
-                .Where(x => x.BrandId == 12)
+                .Where(x => x.BrandId == 21)
                 .Include(img => img.TelephoneImages)
                 .ToListAsync();
             foreach (var item in model)
@@ -97,12 +97,10 @@ namespace OnlineTelMag.Controllers
             ViewData["BrandId"] = new SelectList(_context.Brands, "Id", "NameBrand");
             return View();
         }
- // var imagePath = Path.Combine(wwwroot, "Images");//modelVM.Brands = _context.Brands
- //.Where(x => x.Id == modelVM.BrandId).ToList<SelectListItem>();
+ 
 
         // POST: Telephones/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([FromForm] TelephoneVM telephone)
@@ -152,13 +150,11 @@ namespace OnlineTelMag.Controllers
 
             }).ToList();
 
-            //ViewData["BrandId"] = new SelectList(_context.Brands, "Id", "NameBrand", telephone.BrandId);
             return View(modelVM);
         }
 
         // POST: Telephones/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("TelName,BrandId,Prise,Description,Color,Broi,Date")] TelephoneDetailsVM telephone)

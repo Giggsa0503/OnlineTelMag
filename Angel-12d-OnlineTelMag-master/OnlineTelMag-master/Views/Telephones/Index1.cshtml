@@ -1,73 +1,77 @@
-﻿@model IEnumerable<OnlineTelMag.Data.Telephone> 
+﻿@model IEnumerable<OnlineTelMag.Data.Telephone>
 
 @{
     ViewData["Title"] = "Index1";
 }
 
-<h1>Index</h1>
+<h1>Аксесоари</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a style="color:lime" asp-action="Create">Създай аксесоар </a>
 </p>
-<table class="table">
+<table class="table table-bordered table-striped table-hover">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.TelName)
+                Име
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Brands)
+                Модел
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Prise)
-            </th>
-            
-            <th>
-                @Html.DisplayNameFor(model => model.Color)
+                Цена
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Broi)
+                Цвят
             </th>
             <th>
-                    @Html.DisplayNameFor(model => model.TelephoneImages)
-                </th>
+                Брой
+            </th>
+            <th>
+                Снимка
+            </th>
+            <th></th>
             <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TelName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brands.NameModel)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Prise)
-            </td>
-          
-            <td>
-                @Html.DisplayFor(modelItem => item.Color)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Broi)
-            </td>
-            <td>
-                <div class="card-img">
-                    <img src="~/Images/@Html.DisplayFor(modelItem=>item.TelephoneImages.FirstOrDefault().ImagePath)" style="width:80%; " />
-                </div>
-            </td>
-           
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
-                <a asp-controller="Orders" asp-action="Create" >Buy</a>
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TelName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brands.NameModel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Prise)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Color)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Broi)
+                </td>
+                <td>
+                    <div class="card-img">
+                        <img src="~/Images/@Html.DisplayFor(modelItem=>item.TelephoneImages.FirstOrDefault().ImagePath)" style="width:40%; height:50%" />
+                    </div>
+                </td>
+                @if (User.IsInRole("Admin"))
+                {
+                    <td>
+                        <a style="color:black" asp-action="Edit" asp-route-id="@item.Id">Промяна</a>
+                        <a style="color:black" asp-action="Delete" asp-route-id="@item.Id">Изтрий</a>
+                    </td>
+                }
+                <td>
+                    <a style="color:black" asp-action="Details" asp-route-id="@item.Id">Още</a>
+                    <a style="color:black" asp-controller="Orders" asp-action="Create">Купи</a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>
+
 

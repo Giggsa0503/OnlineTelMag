@@ -4,50 +4,44 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Детайли</h1>
 
-<div>
-    <h4>Telephone</h4>
+<div class="table table-bordered  ">
+    
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.TelName)
+            Име
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.TelName)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Brands)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Brands)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Prise)
+            Цена 
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Prise)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
+            Описание
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Description)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Color)
+            Цвят
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Color)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Broi)
+            Брой
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Broi)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Date)
+            Дата
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Date)
@@ -57,12 +51,11 @@
         @foreach (var item in Model.ImagesPaths)
         {
             <div>
-                <img class="rounded float-left" width="200" src="@item" alt="Image for @Model.TelName" />
+                <img class="rounded float-left" width="200" flost:right src="@item" alt="Image for @Model.TelName" />
             </div>}
 
     </div>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a style="color:lime" asp-action="Index">Назад</a>
 </div>

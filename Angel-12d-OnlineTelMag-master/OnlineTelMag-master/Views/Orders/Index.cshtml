@@ -4,23 +4,24 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Поръчки</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a style="color:lime" asp-action="Create">Създай поръчка</a>
 </p>
-<table class="table">
+<table class="table  table-hover ">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Users)
+                Потребител
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Telephones)
+                Продукт
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DateRegister)
+               Дата
             </th>
+            <th></th>
             <th></th>
         </tr>
     </thead>
@@ -36,10 +37,15 @@
             <td>
                 @Html.DisplayFor(modelItem => item.DateRegister)
             </td>
+            @if (User.IsInRole("Admin"))
+            {
+                <td>
+                    <a style="color:black" asp-action="Delete" asp-route-id="@item.Id">Изтрий</a>|
+                    <a style="color:black" asp-action="Edit" asp-route-id="@item.Id">Промяна</a>
+                </td>
+}
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a style="color:black" asp-action="Details" asp-route-id="@item.Id">Детайли</a>
             </td>
         </tr>
 }

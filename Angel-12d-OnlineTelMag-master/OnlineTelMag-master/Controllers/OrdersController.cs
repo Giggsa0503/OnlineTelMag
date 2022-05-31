@@ -25,7 +25,7 @@ namespace OnlineTelMag.Controllers
         public async Task<IActionResult> Test()
         {
             var userLoged = await _userManager.GetUserAsync(User);
-            var result = await _userManager.AddToRoleAsync(userLoged, Roles.Admin.ToString());   //"Admin");
+            var result = await _userManager.AddToRoleAsync(userLoged, Roles.Admin.ToString()); 
             var roles = _userManager.GetRolesAsync(userLoged);
             return Content("OK !!!");
         }
@@ -93,8 +93,7 @@ namespace OnlineTelMag.Controllers
         }
 
         // POST: Orders/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,TelephoneId")] Order order)
@@ -131,8 +130,7 @@ namespace OnlineTelMag.Controllers
         }
 
         // POST: Orders/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,TelephoneId")] Order order)

@@ -4,9 +4,9 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Промяна</h1>
 
-<h4>Telephone</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,40 +14,35 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="TelName" class="control-label"></label>
+                <label asp-for="TelName" class="control-label">Име</label>
                 <input asp-for="TelName" class="form-control" />
                 <span asp-validation-for="TelName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="BrandId" class="control-label"></label>
+                <label asp-for="BrandId" class="control-label">Модел</label>
                 <select asp-for="BrandId" class="form-control" asp-items="@Model.Brands"></select>
                 <span asp-validation-for="BrandId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Prise" class="control-label"></label>
+                <label asp-for="Prise" class="control-label">Цена</label>
                 <input asp-for="Prise" class="form-control" />
                 <span asp-validation-for="Prise" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
+                <label asp-for="Description" class="control-label">Описание</label>
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Color" class="control-label"></label>
+                <label asp-for="Color" class="control-label">Цвят</label>
                 <input asp-for="Color" class="form-control" />
                 <span asp-validation-for="Color" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Broi" class="control-label"></label>
+                <label asp-for="Broi" class="control-label">Брой</label>
                 <input asp-for="Broi" class="form-control" />
                 <span asp-validation-for="Broi" class="text-danger"></span>
             </div>
-            @*<div class="form-group">
-            <label asp-for="Date" class="control-label"></label>
-            <input asp-for="Date" class="form-control" />
-            <span asp-validation-for="Date" class="text-danger"></span>
-        </div>*@
             <div>
                 @foreach (var item in Model.ImagesPaths)
                 {
@@ -56,15 +51,15 @@
                     </div>}
 
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="form-group" >
+                <input  type="submit" value="Промени" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a style="color:lime" asp-action="Index">Назад</a>
 </div>
 
 @section Scripts {

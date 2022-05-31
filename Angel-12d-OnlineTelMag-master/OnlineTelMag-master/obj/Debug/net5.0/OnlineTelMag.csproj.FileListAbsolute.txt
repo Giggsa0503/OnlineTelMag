@@ -809,3 +809,11 @@ C:\Users\Admin\source\repos\OnlineTelMag\Angel-12d-OnlineTelMag-master\OnlineTel
 C:\Users\Admin\source\repos\OnlineTelMag\Angel-12d-OnlineTelMag-master\OnlineTelMag-master\obj\Debug\net5.0\ref\OnlineTelMag.dll
 C:\Users\Admin\source\repos\OnlineTelMag\Angel-12d-OnlineTelMag-master\OnlineTelMag-master\obj\Debug\net5.0\OnlineTelMag.pdb
 C:\Users\Admin\source\repos\OnlineTelMag\Angel-12d-OnlineTelMag-master\OnlineTelMag-master\obj\Debug\net5.0\OnlineTelMag.genruntimeconfig.cache
+C:\Users\Admin\source\repos\OnlineTelMag\Angel-12d-OnlineTelMag-master\OnlineTelMag-master\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\ChangePassword.cshtml.g.cs
+C:\Users\Admin\source\repos\OnlineTelMag\Angel-12d-OnlineTelMag-master\OnlineTelMag-master\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\Index.cshtml.g.cs
+C:\Users\Admin\source\repos\OnlineTelMag\Angel-12d-OnlineTelMag-master\OnlineTelMag-master\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\PersonalData.cshtml.g.cs
+C:\Users\Admin\source\repos\OnlineTelMag\Angel-12d-OnlineTelMag-master\OnlineTelMag-master\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\TwoFactorAuthentication.cshtml.g.cs
+C:\Users\Admin\source\repos\OnlineTelMag\Angel-12d-OnlineTelMag-master\OnlineTelMag-master\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
+C:\Users\Admin\source\repos\OnlineTelMag\Angel-12d-OnlineTelMag-master\OnlineTelMag-master\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
+C:\Users\Admin\source\repos\OnlineTelMag\Angel-12d-OnlineTelMag-master\OnlineTelMag-master\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\Email.cshtml.g.cs
+C:\Users\Admin\source\repos\OnlineTelMag\Angel-12d-OnlineTelMag-master\OnlineTelMag-master\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\_Layout.cshtml.g.cs

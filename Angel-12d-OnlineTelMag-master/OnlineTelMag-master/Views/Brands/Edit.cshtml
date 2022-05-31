@@ -4,9 +4,9 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Промени</h1>
 
-<h4>Brand</h4>
+<h4>Модел</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,24 +14,24 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="NameBrand" class="control-label"></label>
+                <label asp-for="NameBrand" class="control-label">Име</label>
                 <input asp-for="NameBrand" class="form-control" />
                 <span asp-validation-for="NameBrand" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NameModel" class="control-label"></label>
+                <label asp-for="NameModel" class="control-label">Модел</label>
                 <input asp-for="NameModel" class="form-control" />
                 <span asp-validation-for="NameModel" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Запази" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a style="color:lime" asp-action="Index">Назад</a>
 </div>
 
 @section Scripts {
